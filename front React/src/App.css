@@ -1,0 +1,74 @@
+.card-hover {
+  transition: transform 0.3s ease;
+  /* animation douce */
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  /* grossit de 5% au survol */
+}
+
+/* Fond noir */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: #000000;
+
+}
+
+/* Conteneur des étoiles */
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -1;
+  
+}
+
+/* Les étoiles */
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.9;
+  animation: twinkle 2s infinite ease-in-out;
+    
+    
+}
+
+/* Animation de scintillement */
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0.9;
+  }
+
+  50% {
+    opacity: 0.1;
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffff00;
+  padding: 10px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.glow-text {
+  color: #ffffff;
+  text-shadow:
+    0 0 5px rgba(255, 217, 0, 0.643),
+    0 0 5px #ffd900a4,
+    0 0 10px #ffd900a4,
+    0 0 20px #ffd900a4;
+}
